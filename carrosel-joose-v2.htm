@@ -1,0 +1,1678 @@
+<html>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<head>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="joose.js" type="text/javascript"></script>
+
+
+<script>
+var images = [
+//{
+// big:"images/1.jpg",
+// small: "images/1-medium.jpg",
+// medium: "images/1-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/2.jpg",
+// small: "images/2-medium.jpg",
+// medium: "images/2-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/3.jpg",
+// small: "images/3-medium.jpg",
+// medium: "images/3-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/4.jpg",
+// small: "images/4-medium.jpg",
+// medium: "images/4-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/5.jpg",
+// small: "images/5-medium.jpg",
+// medium: "images/5-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/6.jpg",
+// small: "images/6-medium.jpg",
+// medium: "images/6-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/7.jpg",
+// small: "images/7-medium.jpg",
+// medium: "images/7-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/8.jpg",
+// small: "images/8-medium.jpg",
+// medium: "images/8-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/9.jpg",
+// small: "images/9-medium.jpg",
+// medium: "images/9-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/10.jpg",
+// small: "images/10-medium.jpg",
+// medium: "images/10-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/11.jpg",
+// small: "images/11-medium.jpg",
+// medium: "images/11-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/12.jpg",
+// small: "images/12-medium.jpg",
+// medium: "images/12-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/13.jpg",
+// small: "images/13-medium.jpg",
+// medium: "images/13-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/14.jpg",
+// small: "images/14-medium.jpg",
+// medium: "images/14-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/15.jpg",
+// small: "images/15-medium.jpg",
+// medium: "images/15-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/16.jpg",
+// small: "images/16-medium.jpg",
+// medium: "images/16-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+//{
+// big:"images/17.jpg",
+// small: "images/17-medium.jpg",
+// medium: "images/17-medium.jpg", 
+// title: 'Título',
+// description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+// link_to: 'http://www.uol.com.br',
+// credits: "Agência / Mundial", 
+//},
+
+
+
+  {
+   big:"http://imguol.com/2012/11/11/marcos-rocha-e-wendel-disputam-bola-em-sao-januario-1352667432574_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/marcos-rocha-e-wendel-disputam-bola-em-sao-januario-1352667432574_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/marcos-rocha-e-wendel-disputam-bola-em-sao-januario-1352667432574_142x100.jpg", 
+   title: 'Título',
+   description: 'Donec vel eros at orci interdum vehicula eget in urna. Nulla fermentum urna eu arcu suscipit molestie. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. ',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mundial", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/gremistas-celebram-o-gol-de-empate-no-olimpico-anotado-por-andre-lima-1352667138290_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/gremistas-celebram-o-gol-de-empate-no-olimpico-anotado-por-andre-lima-1352667138290_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/gremistas-celebram-o-gol-de-empate-no-olimpico-anotado-por-andre-lima-1352667138290_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/andre-lima-empatou-a-partida-no-olimpico-1352666864198_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/andre-lima-empatou-a-partida-no-olimpico-1352666864198_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/andre-lima-empatou-a-partida-no-olimpico-1352666864198_142x100.jpg", 
+   title: 'Título',
+   description: 'Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor. Pellentesque gravida risus vel nunc vulputate placerat. Mauris lobortis elit id sapien hendrerit et placerat nulla suscipit. Morbi tempus molestie tempor.',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/lucas-tenta-o-drible-em-anderson-pico-1352665869417_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/lucas-tenta-o-drible-em-anderson-pico-1352665869417_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/lucas-tenta-o-drible-em-anderson-pico-1352665869417_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/felipe-da-passe-perseguido-por-pierre-1352665603241_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/felipe-da-passe-perseguido-por-pierre-1352665603241_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/felipe-da-passe-perseguido-por-pierre-1352665603241_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/cuca-tecnico-do-atletico-mg-dando-instrucoes-atras-do-gol-em-sao-januario-1352665594293_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/cuca-tecnico-do-atletico-mg-dando-instrucoes-atras-do-gol-em-sao-januario-1352665594293_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/cuca-tecnico-do-atletico-mg-dando-instrucoes-atras-do-gol-em-sao-januario-1352665594293_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664958644_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664958644_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664958644_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664947296_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664947296_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664947296_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664938403_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664938403_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/ronaldinho-celebra-gol-do-atletico-mg-marcado-no-primeiro-tempo-contra-o-vasco-1352664938403_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/rogerio-ceni-celebra-gol-do-sao-paulo-feito-de-penalti-1352664553665_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/rogerio-ceni-celebra-gol-do-sao-paulo-feito-de-penalti-1352664553665_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/rogerio-ceni-celebra-gol-do-sao-paulo-feito-de-penalti-1352664553665_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/rogerio-ceni-celebra-gol-do-sao-paulo-feito-de-penalti-1352663937841_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/rogerio-ceni-celebra-gol-do-sao-paulo-feito-de-penalti-1352663937841_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/rogerio-ceni-celebra-gol-do-sao-paulo-feito-de-penalti-1352663937841_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/ney-franco-comanda-o-sao-paulo-no-olimpico-1352662698071_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/ney-franco-comanda-o-sao-paulo-no-olimpico-1352662698071_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/ney-franco-comanda-o-sao-paulo-no-olimpico-1352662698071_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/cortez-e-ze-roberto-em-lance-do-disputado-duelo-em-porto-alegre-1352662687666_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/cortez-e-ze-roberto-em-lance-do-disputado-duelo-em-porto-alegre-1352662687666_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/cortez-e-ze-roberto-em-lance-do-disputado-duelo-em-porto-alegre-1352662687666_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/marcelo-moreno-e-rhodolfo-disputam-bola-1352662183495_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/marcelo-moreno-e-rhodolfo-disputam-bola-1352662183495_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/marcelo-moreno-e-rhodolfo-disputam-bola-1352662183495_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/gremistas-aguardam-o-inicio-da-partida-no-olimpico-contra-o-sao-paulo-1352662178356_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/gremistas-aguardam-o-inicio-da-partida-no-olimpico-contra-o-sao-paulo-1352662178356_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/gremistas-aguardam-o-inicio-da-partida-no-olimpico-contra-o-sao-paulo-1352662178356_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/torcida-do-sao-paulo-marca-presenca-no-olimpico-1352662168997_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/torcida-do-sao-paulo-marca-presenca-no-olimpico-1352662168997_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/torcida-do-sao-paulo-marca-presenca-no-olimpico-1352662168997_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/11/torcedor-sao-paulinho-reverencia-lucas-que-em-breve-deixara-o-clube-para-se-apresentar-ao-psg-1352662159479_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/11/torcedor-sao-paulinho-reverencia-lucas-que-em-breve-deixara-o-clube-para-se-apresentar-ao-psg-1352662159479_80x80.jpg",
+   medium: "http://imguol.com/2012/11/11/torcedor-sao-paulinho-reverencia-lucas-que-em-breve-deixara-o-clube-para-se-apresentar-ao-psg-1352662159479_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/08/joao-filipe-do-sao-paulo-em-acao-durante-jogo-treino-contra-o-aguia-de-lindoias-1352408990272_615x470.jpg",
+   small:"http://imguol.com/2012/11/08/joao-filipe-do-sao-paulo-em-acao-durante-jogo-treino-contra-o-aguia-de-lindoias-1352408990272_80x80.jpg",
+   medium: "http://imguol.com/2012/11/08/joao-filipe-do-sao-paulo-em-acao-durante-jogo-treino-contra-o-aguia-de-lindoias-1352408990272_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/08/johnny-herrera-se-estica-todo-mas-nao-consegue-alcancar-belo-chute-de-rafael-toloi-do-sao-paulo-1352340395665_956x500.jpg",
+   small:"http://imguol.com/2012/11/08/johnny-herrera-se-estica-todo-mas-nao-consegue-alcancar-belo-chute-de-rafael-toloi-do-sao-paulo-1352340395665_80x80.jpg",
+   medium: "http://imguol.com/2012/11/08/johnny-herrera-se-estica-todo-mas-nao-consegue-alcancar-belo-chute-de-rafael-toloi-do-sao-paulo-1352340395665_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/sao-paulinos-comemoram-o-quarto-gol-da-equipe-marcado-por-toloi-na-goleada-sobre-a-la-u-no-pacaembu-1352339911473_956x500.jpg",
+   small:"http://imguol.com/2012/11/07/sao-paulinos-comemoram-o-quarto-gol-da-equipe-marcado-por-toloi-na-goleada-sobre-a-la-u-no-pacaembu-1352339911473_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/sao-paulinos-comemoram-o-quarto-gol-da-equipe-marcado-por-toloi-na-goleada-sobre-a-la-u-no-pacaembu-1352339911473_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/torcida-do-sao-paulo-faz-a-festa-no-pacaembu-durante-a-goleada-por-5-a-0-sobre-a-la-u-1352339905639_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/torcida-do-sao-paulo-faz-a-festa-no-pacaembu-durante-a-goleada-por-5-a-0-sobre-a-la-u-1352339905639_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/torcida-do-sao-paulo-faz-a-festa-no-pacaembu-durante-a-goleada-por-5-a-0-sobre-a-la-u-1352339905639_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/rafael-toloi-e-abracado-por-willian-jose-apos-marcar-um-belo-gol-de-falta-na-goleada-do-sao-paulo-sobre-a-la-u-1352339531054_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/rafael-toloi-e-abracado-por-willian-jose-apos-marcar-um-belo-gol-de-falta-na-goleada-do-sao-paulo-sobre-a-la-u-1352339531054_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/rafael-toloi-e-abracado-por-willian-jose-apos-marcar-um-belo-gol-de-falta-na-goleada-do-sao-paulo-sobre-a-la-u-1352339531054_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/jogadores-do-sao-paulo-abracam-rafael-toloi-autor-do-quarto-gol-da-equipe-na-goleada-sobre-a-la-u-1352339526048_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/jogadores-do-sao-paulo-abracam-rafael-toloi-autor-do-quarto-gol-da-equipe-na-goleada-sobre-a-la-u-1352339526048_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/jogadores-do-sao-paulo-abracam-rafael-toloi-autor-do-quarto-gol-da-equipe-na-goleada-sobre-a-la-u-1352339526048_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/rafael-toloi-e-abracado-pelos-companheiros-de-sao-paulo-apos-marcar-um-golaco-de-falta-na-vitoria-sobre-a-la-u-1352339518087_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/rafael-toloi-e-abracado-pelos-companheiros-de-sao-paulo-apos-marcar-um-golaco-de-falta-na-vitoria-sobre-a-la-u-1352339518087_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/rafael-toloi-e-abracado-pelos-companheiros-de-sao-paulo-apos-marcar-um-golaco-de-falta-na-vitoria-sobre-a-la-u-1352339518087_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/lucas-completa-o-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-1352338070817_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/lucas-completa-o-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-1352338070817_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/lucas-completa-o-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-1352338070817_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/lucas-da-um-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-pela-sul-americana-1352338059460_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/lucas-da-um-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-pela-sul-americana-1352338059460_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/lucas-da-um-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-pela-sul-americana-1352338059460_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/lucas-da-um-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-1352338048927_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/lucas-da-um-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-1352338048927_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/lucas-da-um-mortal-na-comemoracao-do-segundo-gol-do-sao-paulo-contra-a-la-u-no-pacaembu-1352338048927_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/luis-fabiano-festeja-o-terceiro-gol-do-sao-paulo-no-jogo-contra-a-universidad-do-chile-no-pacaembu-1352337587496_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/luis-fabiano-festeja-o-terceiro-gol-do-sao-paulo-no-jogo-contra-a-universidad-do-chile-no-pacaembu-1352337587496_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/luis-fabiano-festeja-o-terceiro-gol-do-sao-paulo-no-jogo-contra-a-universidad-do-chile-no-pacaembu-1352337587496_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/luis-fabiano-comemora-o-terceiro-gol-do-sao-paulo-na-partida-contra-a-la-u-pela-sul-americana-1352337578927_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/luis-fabiano-comemora-o-terceiro-gol-do-sao-paulo-na-partida-contra-a-la-u-pela-sul-americana-1352337578927_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/luis-fabiano-comemora-o-terceiro-gol-do-sao-paulo-na-partida-contra-a-la-u-pela-sul-americana-1352337578927_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/luis-fabiano-comemora-o-terceiro-gol-do-sao-paulo-na-partida-contra-a-la-u-pela-sul-americana-no-pacaembu-1352337569177_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/luis-fabiano-comemora-o-terceiro-gol-do-sao-paulo-na-partida-contra-a-la-u-pela-sul-americana-no-pacaembu-1352337569177_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/luis-fabiano-comemora-o-terceiro-gol-do-sao-paulo-na-partida-contra-a-la-u-pela-sul-americana-no-pacaembu-1352337569177_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/jadson-e-abracado-por-luis-fabiano-apos-marcar-o-primeiro-gol-do-sao-paulo-na-partida-contra-a-la-u-1352337559938_1920x1080.jpg",
+   small:"http://imguol.com/2012/11/07/jadson-e-abracado-por-luis-fabiano-apos-marcar-o-primeiro-gol-do-sao-paulo-na-partida-contra-a-la-u-1352337559938_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/jadson-e-abracado-por-luis-fabiano-apos-marcar-o-primeiro-gol-do-sao-paulo-na-partida-contra-a-la-u-1352337559938_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/rhodolfo-zagueiro-do-sao-paulo-briga-pela-bola-no-alto-com-gonzalez-da-la-u-durante-jogo-no-pacaembu-1352336859428_956x500.jpg",
+   small:"http://imguol.com/2012/11/07/rhodolfo-zagueiro-do-sao-paulo-briga-pela-bola-no-alto-com-gonzalez-da-la-u-durante-jogo-no-pacaembu-1352336859428_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/rhodolfo-zagueiro-do-sao-paulo-briga-pela-bola-no-alto-com-gonzalez-da-la-u-durante-jogo-no-pacaembu-1352336859428_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/herrera-goleiro-da-la-u-sai-do-gol-e-impede-chance-de-gol-do-atacante-luis-fabiano-do-sao-paulo-1352336724775_956x500.jpg",
+   small:"http://imguol.com/2012/11/07/herrera-goleiro-da-la-u-sai-do-gol-e-impede-chance-de-gol-do-atacante-luis-fabiano-do-sao-paulo-1352336724775_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/herrera-goleiro-da-la-u-sai-do-gol-e-impede-chance-de-gol-do-atacante-luis-fabiano-do-sao-paulo-1352336724775_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+  {
+   big:"http://imguol.com/2012/11/07/jogadores-do-sao-paulo-comemoram-o-primeiro-gol-marcado-por-jadson-da-equipe-na-partida-contra-a-la-u-1352336722287_956x500.jpg",
+   small:"http://imguol.com/2012/11/07/jogadores-do-sao-paulo-comemoram-o-primeiro-gol-marcado-por-jadson-da-equipe-na-partida-contra-a-la-u-1352336722287_80x80.jpg",
+   medium: "http://imguol.com/2012/11/07/jogadores-do-sao-paulo-comemoram-o-primeiro-gol-marcado-por-jadson-da-equipe-na-partida-contra-a-la-u-1352336722287_142x100.jpg", 
+   title: 'Título',
+   description: 'descrição...',
+   link_to: 'http://www.uol.com.br',
+   credits: "Agência / Mondialê", 
+  },
+];
+
+/*
+SliderButtonCustom: Utiliza os metodos do SlideShow mas apresenta um botão mais bonito
+*/
+Role( 'SliderButtonCustom', {
+  requires: "start_slide_show",
+  methods: {
+    ativar_slider: function() {
+        this.start_slide_show();
+    },
+    desativar_slider: function() {
+        this.stop_slide_show();
+    },
+    place_custom_slider_button: function() {
+        this.hide_original_slider_btn();
+        btn_custom = $( '<div class="btn-slider-custom inativo"><span> ▶ </span></div>' );
+        obj_carosel = this;
+        btn_custom.click( function() {
+          if ( btn_custom.hasClass("inativo" )) {
+            btn_custom.removeClass('inativo').addClass('ativo').find('span').html('"');
+            obj_carosel.ativar_slider();
+          } else if ( btn_custom.hasClass( 'ativo' ) ) {
+            btn_custom.removeClass('ativo').addClass('inativo').find('span').html(' ▶ ');
+            obj_carosel.desativar_slider();
+          }
+        } );
+        $(this.target).prepend( btn_custom );
+    }, 
+    hide_original_slider_btn: function() {
+        $(this.target).find( 'div.btn-slide-show' ).hide();
+    },
+  },
+  after:{
+    start: function() {
+      this.do_log( "[ SliderButtonCustom ] Esconder botao do slide e mostrar um mais bonito, que controla o feião." );
+      this.place_custom_slider_button();
+    } 
+  },
+} )
+
+
+Role( "SlideShow", {
+  has: {
+    slide_delay: { is: 'rw',init: 2 }, //inicializa com 2 segundos de delay
+    slide_active: { is: 'rw', init: false },
+  },
+  methods: {
+    grow_detail: function( obj_detail, time_ms ) { 
+       setTimeout( function() { 
+            obj_detail.css("margin-top",0);
+            obj_detail.height( 
+                obj_detail.height()+ $(obj_carosel.target).find('li.focused div.thumb').height()/5
+            ); 
+            time_ms = time_ms + (obj_carosel.slide_delay * 1000)/5;
+            if (time_ms < ((obj_carosel.slide_delay * 1000)) ) {
+                obj_carosel.grow_detail( obj_detail, time_ms );
+            } 
+          } , 
+          (obj_carosel.slide_delay * 1000)/5
+       );
+    },
+    animate_detail: function( obj_detail ) {
+        obj_carosel = this;
+        setTimeout( function () {
+          obj_detail.height(0);
+console.log("obj_carosel.make_detail_default()");
+          obj_carosel.make_detail_default();
+        }, (obj_carosel.slide_delay * 1000)+100 );
+ //           $(this.target).find('li.focused div.thumb div.detail').height( 0 );
+       obj_carosel = this;
+       this.grow_detail( obj_detail, 0 );
+    } ,
+    start_delay: function() {
+      obj_carosel = this;
+      setTimeout( function() {
+        obj_carosel.slide_run();
+        obj_carosel.do_log('SlideShow: avancar imagem. img atual: ' + obj_carosel.num_atual );
+      } , this.slide_delay * 1000 );
+    },
+    start_slide_show: function() {
+      this.do_log( 'Iniciando slide show!' );
+      this.do_log( 'com delay de : ' + this.slide_delay + ' na imagem: ' + this.num_atual );
+      this.setSlide_active( true );
+      this.start_delay();
+    },
+    stop_slide_show: function () { 
+      this.setSlide_active( false );
+      this.do_log( 'Parando slide show!' );
+    },
+    slide_run: function () {
+     this.do_log('items.length - 1: '+ (this.items.length - 1 ) ); 
+this.do_log( 'true? ' + ( this.num_atual < (this.items.length -1 )) );
+     this.do_log('num_atual: '+ this.num_atual );
+      if ( this.slide_active && ( this.num_atual < (this.items.length -1 )) ) {
+        this.next();
+        this.start_delay();
+      }
+    },
+    place_slide_show_buttons: function () { 
+      this.do_log( 'Colocando botoes de slide show no lugar.' );
+      btn_slide = $( '<div class="btn-slide-show"></div>' );
+      slide_input = $('<input type="checkbox" name="slide-show" id="slide-show"/>');
+      obj_carosel = this;
+      slide_input.click( function() {
+        if ( $(this).is(':checked') ) {
+          obj_carosel.start_slide_show();
+        } else {
+          obj_carosel.stop_slide_show();
+        }
+      } );
+      btn_slide.append( slide_input );
+      slide_label = $('<label for="slide-show">Slide Show</label>');
+      btn_slide.append( slide_label );
+      $(this.target).find('div.pic-holder').after( btn_slide );
+    },
+    make_detail_default: function() {
+        $(this.target).find('li div.thumb div.detail').css('margin-top', "").css('height', "");
+    },
+  },
+  after: {
+      start: function() { // executa após o método 'start' que está na classe Carousel
+          this.do_log( 'Iníciado Role SlideShow' );//construida
+          this.place_slide_show_buttons();
+      },
+      start_delay: function() { 
+        this.make_detail_default();
+        obj_detail = $(this.target).find('li[num='+this.num_atual+'].focused div.thumb div.detail');
+        this.animate_detail( obj_detail );
+      } 
+  }
+} )
+
+Role( "InfiniteLoop", {
+  requires: [ "clear_thumbs" ],
+  has: {
+    infinite_loop: { is: 'rw', init: 1, },
+    items_original: { is: 'rw' },
+  },
+  methods: {
+      append_items: function() {
+          if( this.items.length > this.thumb_size ) { 
+            if ( this.num_atual >= ( this.items.length - this.thumb_step ) || this.thumb_step >= ( this.items.length - this.num_last_thumb ) ) {
+                // adiciona mais fotos na lista de fotos.(duplica array de fotos pro final)
+                for ( i in this.items_original ) {
+                  this.items.push( this.items_original[i] );
+                }
+                this.do_log('TOTAL IMAGENS: ' + this.items.length );
+            }
+          }
+      },
+      prepend_items: function() { // ***** loop infinito reverso não vale a pena.. 
+          this.do_log( 'INFINITE LOOP - PREV' );
+          already_changed_pic = 0;
+          change_to_pic = -1 ;
+          if ( 
+            this.num_atual < this.thumb_size && 
+            this.items.length > this.thumb_size  // se tiver poucas fotos, nem entra aqui
+          ) {
+              // duplica o array de imagens e joga a foto atual pra equivalente no segundo array (que foi concatenado ao array original)
+              for ( i in this.items_original ) {
+                  this.items.push( this.items_original[i] );
+                  if ( this.num_atual == i && already_changed_pic == 0 ) {
+                      already_changed_pic = 1;
+                      total = parseInt(this.items.length);
+                      total--;
+                      change_to_pic = total;
+                  }
+              }
+              this.do_log('TOTAL IMAGENS: ' + this.items.length );
+          }
+          if ( change_to_pic > -1 ) {
+               this.clear_thumbs();
+               for (i = ( change_to_pic - this.thumb_size ); i <= change_to_pic-1 ; i++ ) {
+                   this.append_thumb( i ) ;
+               }
+               this.show_pic( change_to_pic );
+          }
+      }
+  },
+  before: {
+      prev: function() {
+          this.do_log('PREV - INFINITE LOOP - prev');
+          this.prepend_items();
+      },
+      next: function() {
+          this.do_log('NEXT - INFINITE LOOP - next');
+          this.append_items();
+      },
+      next_thumb_pics: function () { 
+          this.do_log('NEXT - INFINITE LOOP - next_thumb_pics');
+          this.append_items();
+      },
+      prev_thumb_pics: function () { 
+          this.do_log('PREV - INFINITE LOOP - prev_thumb_pics ');
+          this.prepend_items();
+      },
+  },
+  after: {
+      initialize: function() {
+          this.items_original = this.items.slice(0);
+      }
+  }
+} )
+
+Role( "NumeraImagens", {
+  methods: {
+    numerar_imagens: function() { 
+      for ( i in this.items ) {
+        numeral = parseInt(i)+1;
+        this.items[i].numeracao = numeral + "/" + this.items.length;
+      }
+    }
+  },
+  after: {
+    initialize: function () {
+      this.numerar_imagens();
+      this.do_log( this.items );
+    }
+  }
+} )
+
+Role( "Publicidade", {
+  has: {
+    interactions_between_ads: { is: 'rw', init: 5 }, //quantidade de visualizaçoes entre uma propaganda e outra
+    views_actions_count: { is: 'rw', init: 0 },//conta as visualizacoes /acoes
+  },
+  methods: {
+    show_ad: function() {
+      this.setViews_actions_count( this.views_actions_count + 1 );
+      this.do_log( "[Publicidade] Acoes/visualizacoes executadas: " + this.views_actions_count );
+      if ( this.views_actions_count >= this.interactions_between_ads ) {
+        this.setViews_actions_count(0); //zera o contador de views
+        alert( 'Mostra Propaganda' );
+      }
+    }
+  },
+  after: {
+    prev: function() {
+      this.show_ad();
+    },
+    next: function() {
+      this.show_ad();
+    },
+    next_thumb_pics: function () { 
+      this.show_ad();
+    },
+    prev_thumb_pics: function () { 
+      this.show_ad();
+    },
+  }
+} )
+
+Role( "ThumbMouseOver" , {
+  has: {
+  },
+  methods: {
+      show_preview: function( i ) {
+          obj_carosel = this;
+          $.each( $(this.target).find('div.thumbs ul li') , function(i,item) {
+              $(item).unbind('mouseenter').unbind('mouseleave') //retira qualquer mouseenter/leave
+              .mouseenter( function() {
+                  img_medium = $('<div class="thumb-preview"><img src="'+obj_carosel.items[$(item).attr('num')].medium+'"/></div>');
+                  img_medium.click( function() {
+                    $(item).closest('li').find('img').first().trigger('click');
+                  } );
+                  $(this).append( img_medium );
+                  obj_carosel.do_log('mouse enter foto: ' + $(item).attr('num') );
+              } )
+              .mouseleave( function() {
+                  $(this).find( 'div.thumb-preview' ).remove();
+                  obj_carosel.do_log('mouse leave foto: ' + $(item).attr('num') );
+              } );
+          } ); 
+      }
+  },
+  after: {
+    start: function() {
+      this.do_log( 'Inicializando ThumbMouseOver' );
+    },
+    append_thumb: function(i) {
+      this.show_preview( i );
+    },
+    prepend_thumb: function(i) {
+      this.show_preview( i );
+    },
+  },
+} )
+
+Role( "ComLegenda", {
+  has: {
+    container_legenda: { is: 'rw' }
+  },
+  methods: {
+    remove_legenda: function() {
+      $(this.target).find('div.legenda').remove();
+    },
+    mostra_legenda: function(i) {
+      this.do_log( 'Mostrar legenda para foto ' + i );
+      title = $( '<span class="titulo">'+this.items[i].title+'</span>' );
+      numeracao = "" ;
+      if ( typeof this.items[i].numeracao != "undefined"  ) {
+        numeracao = $( '<span class="numeracao">'+ this.items[i].numeracao +'</span>' );
+      }
+      description = $( '<span class="descricao">'+this.items[i].description+'</span>' );
+      credits = $( '<span class="credits">'+this.items[i].credits+'</span>' );
+      legenda = $( "<div class='legenda alpha60'></div>" );
+      legenda.append( title );
+      legenda.append( numeracao );
+      legenda.append( description );
+      legenda.append( credits );
+      this.setContainer_legenda( legenda );
+      $(this.target).find('div.pic-holder').after( legenda );
+    },
+    posicionar_legenda: function(){
+      this.do_log( this.container_legenda );
+      this.do_log( this.container_legenda.height() );
+      this.container_legenda.css( 'margin-top', -1*this.container_legenda.height() );
+    },
+  },
+  after: {
+    show_pic: function(i) {
+      if ( this.foto_existe(i) )
+      this.mostra_legenda(i);
+    },
+    mostra_legenda: function(){
+      this.do_log( this.container_legenda );
+      this.posicionar_legenda();
+    },
+  },
+  before: {
+    mostra_legenda: function(){
+      this.remove_legenda();
+    }
+  }
+} )
+
+/*
+CarouselBasic: Implementa as features básicas de um carrossel
+*/
+Class( "CarouselBasic", {
+    has: {
+        /*
+        target: seletor do elemento que conterá o carossel
+        */
+        target: {is:'rw'},
+        /*
+        items: lista de objetos contendo imagens. 
+        TODO: Verificar formato..
+        */
+        items:  {is:"rw"},
+        /*
+        thumb_size: Quantas imagens devem aparecer no thumb ? 
+        - thumb_size indica quantas imagens podem aparecer no thumb.
+        */
+        thumb_size: {is:'rw'},
+        /*
+        thumb_step: ao carregar mais thumbs, quantos devem ser carregados?
+        - indica total de thumbs que devem ser carregados quando adicionar / retirar thumbs
+        */
+        thumb_step: {is:'rw'},
+        /*
+        num_atual: sempre possúi o numero/indice da foto atual
+        */
+        num_atual: {is:'rw'},
+        /*
+        num_last_thumb: indica qual o número/indice do ultimo thumb mostrado na tela
+        */
+        num_last_thumb: {is:'rw'},
+        /*
+        num_first_thumb: indica qual o número/indice do primeiro thumb mostrado na tela
+        */
+        num_first_thumb: {is:'rw'},
+        /*
+        div_thumbs: indica qual o DOM que está com os thumbs
+        */
+        div_thumbs: {is:'rw'},
+        /*
+        debug: booleano.Ativa e desativa o debug
+        */
+        debug: { is: 'rw', init: 0 },
+    },
+    methods: {
+        update_index_numbers: function() {
+            this.update_num_foto_atual();
+            this.setNum_last_thumb( parseInt( $(this.target).parent().find('div.thumbs ul li:last').attr('num') ) );
+            this.setNum_first_thumb( parseInt( $(this.target).parent().find('div.thumbs ul li:first').attr('num') ) );
+        },
+        update_num_foto_atual: function () {
+            var num_foto_atual = $(this.target).parent().find('div.pic-holder img').attr('num');
+            this.do_log( 'num foto atual: ' + num_foto_atual );
+            this.do_log( 'Total Fotos: ' + this.items.length );
+            this.do_log( 'Total Fotos (originalmnete): ' + this.items_original.length );
+            this.setNum_atual( parseInt(num_foto_atual ));
+        },
+        start: function () {
+            this.do_log('start');
+            this.list_thumbs();
+            this.create_pic_holder();
+            this.show_first_pic();
+            this.update_index_numbers();
+        },
+        thumb_mouseover: function() {
+            this.do_log( 'over thumb' );
+        },
+        prev: function() {
+            this.do_log('PREV');
+            if ( this.num_atual == 0 ) {
+                this.do_log('ja esta na primeira foto');
+                return;
+            } else if ( this.num_atual == this.num_first_thumb ) {
+                //recarrega fotos anteriores no thumb
+                this.prev_thumb_pics();
+                this.show_pic( this.num_atual - 1 );
+            } else {
+                //verifica se esta fora do range pra direita no thumb
+                if ( this.num_atual - 1 > this.num_last_thumb ) {
+                    this.show_pic( this.num_last_thumb );//forca abrir a ultima imagem do thumb
+                    return;
+                }
+
+                // abre a foto anterior
+                this.show_pic( parseInt( this.num_atual ) - 1 );
+            }
+        },
+        next: function() {
+            this.do_log('NEXT');
+
+
+            //verifica se eh ultima
+            if ( this.num_atual == this.items.length ) {
+                //ja esta na ultima foto.
+                this.do_log('ja ta na ultima foto');
+                return;
+            } else if ( this.num_atual == this.num_last_thumb ) { // foto atual é igual a ultima foto do thumb
+                this.do_log('carregar mais imagens');
+                //carrega as proximas imagens do thumb
+                //moostra a proxima imagem
+                this.next_thumb_pics();
+                this.show_pic( this.num_atual + 1 );
+            } else {
+                this.do_log( 'abrir uma nova foto, ja no thumb' );
+
+                //verifica se a proxima imagem esta no thumb.. se não tiver no thumb tem que determinar o num_atual da primeira imagem no thumb
+                if ( this.num_atual + 1 < this.num_first_thumb ) {
+                    this.show_pic( this.num_first_thumb );//forca abrir a primeira imagem do thumb
+                    return;
+                }
+
+                //mostra proxima foto de acordo com num
+                this.show_pic( this.num_atual + 1 );
+            }
+        },
+        create_next_prev_buttons: function() {
+            //botao NEXT
+            var btn_next = $('<div class="btn-carrossel-nav btn-next"><div><span> &#187; </span></div></div>');
+            btn_next.bind( 'click', function() { 
+              obj_carosel.next();
+            } );
+
+            //botao PREV
+            var btn_prev = $('<div class="btn-carrossel-nav btn-prev"><div><span> &#171; </span></div></div>');
+            btn_prev.click( function ( ) {
+              obj_carosel.prev();
+            } );
+            $(this.target).find('div.pic-holder').prepend(btn_prev).prepend(btn_next);
+        },
+        place_buttons: function () {
+            var obj_carosel = this;
+            
+            this.create_next_prev_buttons();
+
+            //btn next thumbs
+            btn_thumbs_next = $( '<div class="btn-thumb btn-thumb-next"><div> &rsaquo;  </div></div>' );
+            btn_thumbs_next.click( function () { 
+                obj_carosel.update_index_numbers();
+                obj_carosel.do_log( 'Mostrar mais imagens a partir da imagem: ' + obj_carosel.num_last_thumb );
+                obj_carosel.next_thumb_pics( obj_carosel.num_last_thumb );
+            } );
+
+            //btn prev thumbs
+            btn_thumbs_prev = $( '<div class="btn-thumb btn-thumb-prev"><div>  &lsaquo; </div></div>' );
+            btn_thumbs_prev.click( function ()  { 
+                obj_carosel.update_index_numbers();
+                obj_carosel.do_log( 'Mostrar mais imagens a partir da imagem: ' + obj_carosel.num_first_thumb );
+                obj_carosel.prev_thumb_pics( obj_carosel.num_first_thumb );
+            } );
+
+            $(this.div_thumbs).before(btn_thumbs_prev).before(btn_thumbs_next);
+
+            //btn menos thumb
+           
+        },
+        foto_existe: function(i) {
+            if ( typeof this.items[i] == 'object' ) {
+                this.do_log( "FOTO: " + i + " existe "  );
+                return true;
+            } else {
+                this.do_log( "FOTO: " + i + " não existe "  );
+                return false;
+            }
+        } ,
+        clear_thumbs: function () {
+            this.do_log('clear thumbs');
+            $(this.target).find('div.thumbs ul li').remove();
+        },
+        list_thumbs: function () {
+            this.do_log('listar thumbs');
+            //create_thumb_list
+            div_thumbs = $('<div class="thumbs"><ul></ul></div>');
+            $(this.target).prepend(div_thumbs);
+            this.setDiv_thumbs( div_thumbs.find('ul') );
+            this.do_log( this.div_thumbs );
+            //list N imagens
+            for (i=0;i<this.thumb_size;i++ ) {
+                this.append_thumb(i);
+            }
+        },
+        append_thumb: function(i) {
+            if ( this.foto_existe(i) ) {
+              this.do_log('Inserindo imagem '+i+' no thumb');
+              this.do_log( images[i] );
+              img_thumb = $('<div class="thumb" num="'+i+'"><div class="detail" num="'+i+'"></div><img src="'+images[i].small+'" num="'+i+'"></div>');
+              var obj_carosel = this;
+              $(img_thumb).click( function() {
+                obj_carosel.show_pic( $(this).attr('num') );
+              } );
+              $(this.div_thumbs).append('<li num="'+i+'"></li>');
+              $(this.div_thumbs).find('li[num='+i+']').append(img_thumb);
+            }
+        } ,
+        do_log: function(text) {
+            if ( this.debug == 1 ) console.log( text );
+        },
+        prepend_thumb: function(i) {
+            this.do_log('Inserindo imagem '+i+' no thumb');
+            this.do_log( images[i] );
+            img_thumb = $('<div class="thumb" num="'+i+'"><div class="detail" num="'+i+'"></div><img src="'+images[i].small+'" num="'+i+'"></div>');
+            var obj_carosel = this;
+            $(img_thumb).click( function() {
+                obj_carosel.show_pic( $(this).attr('num') );
+            } );
+            $(this.div_thumbs).prepend('<li num="'+i+'"></li>');
+            $(this.div_thumbs).find('li[num='+i+']').prepend(img_thumb);
+        } ,
+        remove_thumb: function(i) {
+            $( $(this.target).find('div.thumbs ul li:nth-child('+i+')') ).remove();
+        },
+        show_first_pic: function() {
+            this.show_pic(0);//img 0
+        },
+        show_pic: function (i) {
+            if ( this.foto_existe(i) ) {
+                $(this.target).find('div.pic-holder').html('<img src="'+images[i].big+'" num="'+i+'">');
+                this.border_thumb( i );
+            }
+        },
+        border_thumb: function(i) {
+            $.each( $( this.div_thumbs ).find( 'li' ) , function(i,item){
+                $(item).removeClass('focused');
+            }); 
+            $( this.div_thumbs ).find( 'li[num='+i+']' ).addClass('focused');
+        },
+        create_pic_holder: function () {
+            var big_pic_holder = $('<div class="pic-holder"></div>');
+            $(this.target).append( big_pic_holder );
+        },
+        next_thumb_pics: function (num) {
+            if ( typeof num == 'undefined' ) 
+              num = this.num_atual;
+
+            this.do_log( 'mostrando next thumbs a partir de ' + num );
+
+            for ( i = num+1; i < num + this.thumb_step; i++ ) {
+                if ( this.foto_existe( i ) ) {
+                    this.remove_thumb( 1 );//tira primeira foto do thum pra dar mais lugar pras outrs
+                    this.append_thumb( i );
+                } else {
+                    this.do_log( "foto " + i + " não existe " );
+                }
+            }
+        },
+        prev_thumb_pics: function (num) {
+            if ( typeof num == 'undefined' ) 
+              num = this.num_atual;
+
+            floor = num - this.thumb_step;//no minimo zero. eh o maximo de thumbs que podem aparecer da posicao atual ate o inicio da lista
+            if( floor < 0) {
+                floor = 0;
+            }
+            this.do_log( "FLOOR: " + floor );
+            for ( i = num - 1; i >= floor ; i-- ) {
+                this.do_log('existe foto ' + i);
+                if ( this.foto_existe( i ) ) {
+                    this.remove_thumb( this.thumb_size );//tira a ultima do thumb pra dar lugar pra fotos no inicio do thumb list
+                    this.prepend_thumb( i );
+                } else {
+                    this.do_log( "foto " + i + " não existe " );
+                }
+            }
+        },
+//      initialize: function( args ) { //recebe os mesmos args passados ao construtor
+//          this.do_log( args );
+//          this.do_log( 'Após Inicializar' );
+//      }, 
+    },
+    after: {
+        initialize: function() {
+            this.do_log( 'Início' );
+            this.do_log( 'executado após construir o objeto' );
+//          this.do_log( this.target );
+//          $(this.target).after( 'AFTER' );
+//          this.do_log('inicializado');
+        },
+        create_pic_holder: function() {
+            this.place_buttons();
+        },
+        prev: function() {
+            this.update_index_numbers();
+        },
+        next: function() {
+            this.update_index_numbers();
+        },
+        append_thumb: function() {
+            this.update_index_numbers();
+        },
+        prepend_thumb: function() {
+            this.update_index_numbers();
+        },
+        show_pic: function() {
+            this.update_index_numbers();
+            this.create_next_prev_buttons();
+        },
+        start: function() {
+            this.update_index_numbers();
+        },
+        next_thumb_pics: function() {
+            this.border_thumb( this.num_atual );
+        },
+        prev_thumb_pics: function() {
+            this.border_thumb( this.num_atual );
+        },
+    },
+    before: {
+        show_pic: function() {
+        },
+        next_thumb_pics: function() {
+            this.do_log( '- [DEBUG] --------------' );
+            this.do_log( 'next thumb pics' );
+            this.do_log( 'thumb_step: ' + this.thumb_step);
+            this.do_log( 'foto atual: '+this.num_atual);
+            this.do_log( 'tamamnho thumb: ' + this.thumb_size);
+            this.do_log( 'total fotos: '+ this.items.length) ;
+        },
+        prev_thumb_pics: function() {
+            this.do_log( '- [DEBUG] --------------' );
+            this.do_log( 'next thumb pics' );
+            this.do_log( 'thumb_step: ' + this.thumb_step);
+            this.do_log( 'foto atual: '+this.num_atual);
+            this.do_log( 'tamamnho thumb: ' + this.thumb_size);
+            this.do_log( 'total fotos: '+ this.items.length) ;
+        },
+    },
+} )
+
+/*
+Classe carrosel, e os componentes
+*/
+
+Class("Carousel", {
+    isa: CarouselBasic,  // [Obrigatório] Implementa funcionalidade básica do carrossel
+    does: [ 
+      NumeraImagens,      // Ativa numeracao nas imagens
+      SlideShow,          // Ativa funcionalidades de Slide Show
+      InfiniteLoop,       // Modifica funcionalidade dos botoes: 'proximo','mais thumb'
+      Publicidade,        // Implementa uma publicidade que aparece a cada X cliques
+      ComLegenda,         // Mostra legenda nas imagens
+      SliderButtonCustom, // Esconde o botão padrão do "SlideShow" e cria um novo botão que controla funcionalidade padrão do "SlideShow"
+      ThumbMouseOver
+    ],
+});
+
+var carosel = new Carousel({
+  thumb_size: 13,
+  target: 'div#imagens',
+  items: images,
+  thumb_step: 5, //quantidade de itens carregados ao clicar next
+  interactions_between_ads: 30,
+  debug: 1,
+});
+
+$(document).ready(function () {
+  carosel.start();
+  console.log( carosel );
+}); 
+
+</script>
+
+<style>
+
+div#imagens-container {
+  background: #000000;
+  padding: 15px;
+  float: left;
+}
+div#imagens {
+  width: 650px;
+  float: left;
+  background: #000000;
+}
+div#imagens div.thumbs {
+  float:left;
+}
+div#imagens div.thumbs ul {
+  list-style: none;
+  float: left;
+  overflow: hidden;
+  width: 600px;
+  height: 40px;
+  margin-left: 23px !important;
+}
+div#imagens div.thumbs ul li {
+  float: left;
+  cursor: pointer;
+  margin-left: 3px;
+}
+div#imagens div.thumbs ul li div.thumb {
+    background: #ccc;
+    height: 34px;
+    width: 34px;
+    border: 3px solid #454545;
+}
+div#imagens div.thumbs ul li div.thumb img {
+/*  max-width: 38px;*/
+    max-height: 38px;
+}
+div#imagens div.pic-holder img {
+height: auto;
+}
+div#imagens div.pic-holder {
+    float:left;
+    width: 650px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+div#imagens div.btn-carrossel-nav { 
+  margin-top: 0 !important;
+  position: absolute;
+  height: 100%;
+  background: transparent;
+  width: 325px;
+  cursor: pointer;
+}
+div#imagens div.btn-carrossel-nav span {
+  display:none;
+  cursor: pointer;
+  color: #000000;
+  font-weight: bold;
+  position: absolute;
+  height: auto;
+  width: auto;
+  border: 1px solid #454545;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  color: #ffffff;
+  font-size: 60px;
+  padding: 15px 3px 25px 0px;
+}
+div#imagens div.btn-carrossel-nav:hover span {
+  display:block;
+}
+div#imagens div.btn-prev div {
+  margin-top: 50%;
+  margin-left: 0px;
+  float:left;
+}
+div#imagens div.btn-next div {
+  margin-top: 50%;
+  margin-left: 80%;
+  float:left;
+}
+div#imagens div.btn-next {
+margin-left: 325px !important;
+}
+div#imagens div.btn-prev span {
+    margin-top:9px;
+    margin-left: 10px;
+    float:left;
+}
+div#imagens div.btn-next span {
+    margin-top: 9px;
+    margin-left: 10px;
+    float:left;
+}
+div#imagens div.btn-thumb {
+  background: #000000;
+  width: 17px;
+  height: 34px;
+  position: absolute;
+  cursor: pointer;
+  color: #FFFFFF;
+  float:left;
+  border: 3px solid #454545;
+}
+div#imagens div.btn-thumb div {
+font-size: 50px;
+margin-top: 4px;
+}
+div#imagens div.btn-thumb-prev {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+div#imagens div.btn-thumb-next {
+  margin-top: 0px;
+  margin-left: 585px;
+}
+
+div.thumbs ul li div.detail { 
+  background: rgb(255, 0, 0);
+  background: rgba(255, 0, 0, 0.5);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000)";
+}
+
+div.thumbs ul li.focused div.detail { 
+  margin-top: 38px;
+  height: 2px;
+  width: 34px;
+  position: absolute;
+}
+div.thumbs ul li.focused img { 
+  width: 38px !important;
+}
+
+
+/* SLIDE SHOW - INICIO */
+div#imagens div.btn-slide-show {
+    position:absolute;
+    margin-top: -100px;
+    margin-left: 10px;
+    background: #FFFFFF;
+}
+div#imagens div.btn-slide-show input {
+    float: left;
+}
+div#imagens div.btn-slide-show label {
+    float: left;
+}
+/* SLIDE SHOW - END */
+
+/* LEGENDA */
+.alpha60 {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+div#imagens div.legenda {
+  position: relative;
+  margin-top: -10px;
+  color: #FFFFFF;
+  width: 100%;
+  float:left;
+}
+div#imagens div.legenda span {
+
+}
+div#imagens div.legenda span.numeracao {
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    width: 100px;
+}
+div#imagens div.legenda span.titulo {
+    font-weight: bold;
+    width: 520px;
+    float: left;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+div#imagens div.legenda span.descricao {
+    float: left;
+    clear: left;
+    padding: 0 5px;
+}
+div#imagens div.legenda span.credits {
+    clear: left;
+    float: right;
+    height: auto;
+    line-height: 28px;
+    margin-right: 10px;
+
+}
+/* LEGENDA */
+
+/* Custom slider INICIO */
+div#imagens div.btn-slider-custom {
+  background: #000000;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 611px;
+  height: 34px;
+  width: 34px;
+  border: 3px solid #454545;
+  cursor: pointer;
+}
+div#imagens div.btn-slider-custom.inativo {
+  color: #FFFFFF;
+}
+div#imagens div.btn-slider-custom.ativo {
+  color: #999999;
+}
+div#imagens div.btn-slider-custom.ativo span {
+  font-size: 60px;
+  padding-left: 6px;
+  padding-top: 22px;
+}
+div#imagens div.btn-slider-custom span {
+padding: 7px 0px 1px 10px;
+float: left;
+font-size: 20px;
+}
+/* Custom slider FIM */
+
+/* Thumb preview -inicio */
+div#imagens div.thumbs ul li div.thumb-preview {
+    height: 100px;
+    position: absolute;
+    width: 142px;
+    z-index: 10;
+}
+div#imagens div.thumbs ul li div.thumb-preview img {
+    height: 100% !important;
+    width: 100% !important;
+}
+/* Thumb preview -end */
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+        <div class="span8">Carousel com Joose</div>
+        <div class="span4"></div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <div id="imagens-container">
+                <div id="imagens">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="span12"><h1>Carousel - v0.01 - Carrossel com Joose</h1></div>
+    </div>
+
+    <div class="row">
+      <div class="span12"><h2>SINOPSYS:</h2></div>
+      <div class="span12">
+          <p>
+              (mais uma) Implementação de um carrosel em Joose.
+          </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12"><h2>USO:</h2></div>
+      <div class="span12">
+          <textarea style="width: 976px; height: 536px;">
+            Class("Carousel", {
+                isa: [ CarouselBasic ],  // [Obrigatório] Implementa funcionalidade básica do carrossel
+                does: [
+                  NumeraImagens,      // [Opcional] Ativa numeracao nas imagens
+                  SlideShow,          // [Opcional] Ativa funcionalidades de Slide Show
+                  InfiniteLoop,       // [Opcional] Modifica funcionalidade dos botoes: 'proximo','mais thumb'
+                  Publicidade,        // [Opcional] Implementa uma publicidade que aparece a cada X cliques
+                  ComLegenda,         // [Opcional] Mostra legenda nas imagens
+                  SliderButtonCustom  // [Opcional,requer/depende do SlideShow] 
+                                      // Esconde o botão padrão do "SlideShow" e cria um novo botão que controla funcionalidade padrão do "SlideShow"
+                  ThumbMouseOver      // [Opcional] Implementa funcionalidades de mouseover nas imagens do thumb
+                ],
+            });
+
+            // Opção #1 de inicialização (passando valores dos atributor no construtor):
+
+            var carosel = new Carousel({
+              thumb_size: 14,
+              target: 'div#imagens',
+              items: images,
+              thumb_step: 5, //quantidade de itens carregados ao clicar next
+              interactions_between_ads: 10, // Quantidade de fotos/acoes realizadas antes de mostrar publicidade
+            });
+
+            $(document).ready(function () {
+              carosel.start();
+              console.log( carosel );
+            }); 
+
+            // Opção #2 de inicialização (cria instancia sem passar argumentos.):
+            var carosel = new Carousel();
+            $(document).ready(function () {
+            //console.log(carosel);
+              carosel.setThumb_size(15);
+              carosel.setTarget('div#imagens');
+              carosel.setItems( images );
+              carosel.setThumb_step( 5 );
+              console.log(carosel);
+              carosel.start();
+            }); 
+
+          </textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12"><h2>Roles</h2></div>
+    </div>
+
+    <div class="row">
+      <div class="span2">Roles disponíveis:</div>
+      <div class="span10">
+          <ul style="list-style:none;">
+              <li><a href="#CarouselBasic">CarouselBasic</a></li>
+              <li><a href="#NumeraImagens">NumeraImagens</a></li>
+              <li><a href="#SlideShow">SlideShow</a></li>
+              <li><a href="#InfiniteLoop">InfiniteLoop</a></li>
+              <li><a href="#Publicidade">Publicidade</a></li>
+              <li><a href="#SliderButtonCustom">SliderButtonCustom</a></li>
+              <li><a href="#ComLegenda">ComLegenda</a></li>
+              <li><a href="#ThumbMouseOver">ThumbMouseOver</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="row" id="CarouselBasic">
+      <div class="span12"><h3>CarouselBasic:</h3></div>
+      <div class="span12">
+          <p>
+          Implementa funcionalidade básica do carrossel. 
+          <br>
+          Esta role contem os métodos considerados básicos para a implementação de um carrossel.
+          <br>
+          Esta classe inicia a montagem do carrosel, adiciona os botões e ativa a navegação entre imagens e lista de thumbs.
+          </p>
+      </div>
+    </div>
+
+    <div class="row" id="NumeraImagens">
+      <div class="span12"><h3>NumeraImagens:</h3></div>
+      <div class="span12">
+          <p>
+          Ativa numeracao nas imagens
+          <br>
+          Esta role passa por cada imagem carregada no carrosel e adiciona uma numeração na imagem.
+          <br>
+          A numeração fica no formato: 1/100, 2/100, etc.
+          </p>
+      </div>
+    </div>
+
+    <div class="row" id="SlideShow">
+      <div class="span12"><h3>SlideShow:</h3></div>
+      <div class="span12">
+          <p>
+          Ativa funcionalidades básicas de Slide Show.
+          <br>
+          Esta role utiliza os métodos do CarouselBasic. Ou seja, 
+          <br>
+          o slide show controla as ações de 'próxima imagem', 
+          <br>
+          'imagem anterior' que estão implementadas no CarroselBasic.
+          </p>
+      </div>
+    </div>
+
+    <div class="row" id="InfiniteLoop">
+      <div class="span12"><h3>InfiniteLoop:</h3></div>
+      <div class="span12">
+          <p>
+          Simplesmente modifica funcionalidade dos botoes: 
+          <br>
+            'proximo','mais thumb'
+          <br>
+          e, faz eles continuarem a carregar imagens mesmo que cheguem ao final da lista de imagens.
+          </p>
+      </div>
+    </div>
+
+    <div class="row" id="Publicidade">
+      <div class="span12"><h3>Publicidade:</h3></div>
+      <div class="span12">
+          <p>
+          Ativa funcionalidades para publicidade. Utiliza o valor do atributo:  
+          <br>
+          <strong>interactions_between_ads</strong>
+          <br>
+          Este atributo indica quantas imagens/ações podem ser executadas para mostrar uma publicidade.
+          </p>
+      </div>
+    </div>
+
+    <div class="row" id="SliderButtonCustom">
+      <div class="span12"><h3>SliderButtonCustom:</h3></div>
+      <div class="span12">
+          <p>
+          O SlideShow coloca um input bastante feio para controlar o slide show. 
+          <br>
+          Esta classe esconde esse botão feio e cria um outro (mais bonito) que controla esse feio.
+          </p>
+      </div>
+    </div>
+
+
+    <div class="row" id="ComLegenda">
+      <div class="span12"><h3>ComLegenda:</h3></div>
+      <div class="span12">
+          <p>
+          Mostra legenda nas imagens. Utiliza os campos 'descricao', 'titulo', 'credits' das imagens.
+          </p>
+      </div>
+    </div>
+
+
+    <div class="row" id="ThumbMouseOver">
+      <div class="span12"><h3>ThumbMouseOver:</h3></div>
+      <div class="span12">
+          <p>
+          Mostra uma imagem em miniatura ao passar mouse por cima do thumb.
+          Tambem implementa um click na imagem miniatura, que abre a imagem grande.
+          </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="span12"><h4>Apêndice</h4></div>
+      <div class="span12"><h5>Joose</h5></div>
+      <div class="span12">
+          <p>
+          <br>// Documentação sobre o construtor: (como alterar, como funciona, etc)
+          <br>http://openjsan.org/doc/s/sa/samuraijack/Joose/3.006/lib/Joose/Manual/Construction.html
+          <br>http://openjsan.org/doc/s/sa/samuraijack/Joose/3.006/
+          </p>
+      </div>
+      <div class="span12"><h4>after? before? around? pra que isto?</h4></div>
+      <div class="span12">
+          <p>
+          A grande vantagem de utilizar before, after e around é a possibilidade de 'grudar e modificar' rotinas nos métodos, sem mexer na implementação original do método.
+          <br><br>
+          Quando queremos alterar um método em um módulo externo, temos 2 possibilidades: 
+          <br>
+              - re-implementar/copiar o método inteiro (repetindo código/pessimo).  //menos código menos bugs
+          <br>
+              - utilizar before, after ou around
+          <br>
+
+          <br>
+          <br>
+          Por exemplo: Se eu tenho várias classes utilizando um método, e eu quero apenas executar algo ao final do método, posso usar um 'after'... então eu coloco na minha classe 'after metodo X, execute Y'. Dessa maneira posso ter certeza que não vou quebrar a funcionalidade original das classes que ja utilizam esse metodo. E , vou continuar usando o mesmo método (ou seja não vou repetir o mesmo método duas vezes).
+          <br>
+          <br>
+          Outro exemplo é o método 'initialize', que existe em todas as classes/roles Joose... supondo que eu quero executar um código logo após o initialize... se eu mexer no método 'initialize', eu teria que re-implementar o método inteiro apenas para adicioinar uma nova linha (que eu quero executar ao final do initialize). 
+          <br>
+          Mas utilizando before ou after, eu consigo executar essa linha de código após o método sem precisar mexer no método original em si. 
+          <br>
+          <br>
+          A vantagem é que eu consigo alterar a rotina do método sem necessariamente mexer no método.
+          </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12"><h6>Autor</h6></div>
+      <div class="span12">
+        Hernan Lopes
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
