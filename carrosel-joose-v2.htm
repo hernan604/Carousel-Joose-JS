@@ -517,8 +517,8 @@ Role( 'SliderButtonCustom', {
 
 Role( "SlideShow", {
   has: {
-    slide_delay: { is: 'rw',init: 2 }, //inicializa com 2 segundos de delay
-    slide_active: { is: 'rw', init: false },
+    slide_delay: { is: 'rw',init: (function() { return 2 }) }, //inicializa com 2 segundos de delay
+    slide_active: { is: 'rw', init: (function() { return false }) },
   },
   methods: {
     grow_detail: function( obj_detail, time_ms ) { 
@@ -609,7 +609,7 @@ this.do_log( 'true? ' + ( this.num_atual < (this.items.length -1 )) );
 Role( "InfiniteLoop", {
   requires: [ "clear_thumbs" ],
   has: {
-    infinite_loop: { is: 'rw', init: 1, },
+    infinite_loop: { is: 'rw', init: (function() { return 1 }), },
     items_original: { is: 'rw' },
   },
   methods: {
@@ -697,8 +697,8 @@ Role( "NumeraImagens", {
 
 Role( "Publicidade", {
   has: {
-    interactions_between_ads: { is: 'rw', init: 5 }, //quantidade de visualizaçoes entre uma propaganda e outra
-    views_actions_count: { is: 'rw', init: 0 },//conta as visualizacoes /acoes
+    interactions_between_ads: { is: 'rw', init: (function() { return 5 }) }, //quantidade de visualizaçoes entre uma propaganda e outra
+    views_actions_count: { is: 'rw', init: (function() { return 0 }) },//conta as visualizacoes /acoes
   },
   methods: {
     show_ad: function() {
