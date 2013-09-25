@@ -1,0 +1,103 @@
+#Carousel Joose JS
+
+This is my version of a carousel done in Joose JS. 
+
+The idea is simple.. i have 4 main actions: 'next', 'prev', 'thumbs-next' and 'thumbs-prev', and the plugins usually get triggered "after" some method.
+
+Minha versão do carrosel feito com joose. Possibilita adicionar plugins que podem ser criados de maneira independente.
+
+Exemplo 1: Standard (carrega tudo):
+
+            Class("Carousel", {
+                isa: [ CarouselBasic ],  // [Requerido] Implementa funcionalidade básica do carrossel
+                does: [
+                  NumeraImagens,      // [Opcional] Ativa numeracao nas imagens
+                  SlideShow,          // [Opcional] Ativa funcionalidades de Slide Show
+                  InfiniteLoop,       // [Opcional] Modifica funcionalidade dos botoes: 'proximo','mais thumb'
+                  Publicidade,        // [Opcional] Implementa uma publicidade que aparece a cada X cliques
+                  ComLegenda,         // [Opcional] Mostra legenda nas imagens
+                  SliderButtonCustom  // [Opcional,requer/depende do SlideShow]
+                                      // Esconde o botão padrão do "SlideShow" e cria um novo botão que controla funcionalidade padrão do "SlideShow"
+                  ThumbMouseOver      // [Opcional] Implementa funcionalidades de mouseover nas imagens do thumb
+                ],
+            });
+
+            // Opção #1 de inicialização (passando valores dos atributor no construtor):
+
+            var carosel = new Carousel({
+              thumb_size              : 14,
+              target                  : 'div#imagens',
+              items                   : images,
+              thumb_step              : 5, //quantidade de itens carregados ao clicar next
+              interactions_between_ads: 10, // Quantidade de fotos/acoes realizadas antes de mostrar publicidade
+            });
+
+            $(document).ready(function () {
+              carosel.start();
+              console.log( carosel );
+            });
+
+
+Exemplo 2: Sem legenda
+
+            Class("Carousel", {
+                isa: [ CarouselBasic ],  // [Requerido] Implementa funcionalidade básica do carrossel
+                does: [
+                  NumeraImagens,      // [Opcional] Ativa numeracao nas imagens
+                  SlideShow,          // [Opcional] Ativa funcionalidades de Slide Show
+                  InfiniteLoop,       // [Opcional] Modifica funcionalidade dos botoes: 'proximo','mais thumb'
+                  Publicidade,        // [Opcional] Implementa uma publicidade que aparece a cada X cliques
+///////////        ComLegenda,         // [Opcional] Mostra legenda nas imagens
+                  SliderButtonCustom  // [Opcional,requer/depende do SlideShow]
+                                      // Esconde o botão padrão do "SlideShow" e cria um novo botão que controla funcionalidade padrão do "SlideShow"
+                  ThumbMouseOver      // [Opcional] Implementa funcionalidades de mouseover nas imagens do thumb
+                ],
+            });
+
+            // Opção #1 de inicialização (passando valores dos atributor no construtor):
+
+            var carosel = new Carousel({
+              thumb_size              : 14,
+              target                  : 'div#imagens',
+              items                   : images,
+              thumb_step              : 5, //quantidade de itens carregados ao clicar next
+              interactions_between_ads: 10, // Quantidade de fotos/acoes realizadas antes de mostrar publicidade
+            });
+
+            $(document).ready(function () {
+              carosel.start();
+              console.log( carosel );
+            });
+
+Exemplo 3: Sem slideshow
+
+            Class("Carousel", {
+                isa: [ CarouselBasic ],  // [Obrigatório] Implementa funcionalidade básica do carrossel
+                does: [
+                  NumeraImagens,      // [Opcional] Ativa numeracao nas imagens
+////////////      SlideShow,          // [Opcional] Ativa funcionalidades de Slide Show
+                  InfiniteLoop,       // [Opcional] Modifica funcionalidade dos botoes: 'proximo','mais thumb'
+                  Publicidade,        // [Opcional] Implementa uma publicidade que aparece a cada X cliques
+                  ComLegenda,         // [Opcional] Mostra legenda nas imagens
+////////////      SliderButtonCustom  // [Opcional,requer/depende do SlideShow]
+                                      // Esconde o botão padrão do "SlideShow" e cria um novo botão que controla funcionalidade padrão do "SlideShow"
+                  ThumbMouseOver      // [Opcional] Implementa funcionalidades de mouseover nas imagens do thumb
+                ],
+            });
+
+            // Opção #1 de inicialização (passando valores dos atributor no construtor):
+
+            var carosel = new Carousel({
+              thumb_size: 14,
+              target: 'div#imagens',
+              items: images,
+              thumb_step: 5, //quantidade de itens carregados ao clicar next
+              interactions_between_ads: 10, // Quantidade de fotos/acoes realizadas antes de mostrar publicidade
+            });
+
+            $(document).ready(function () {
+              carosel.start();
+              console.log( carosel );
+            });
+
+
